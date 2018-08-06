@@ -4,6 +4,7 @@ import 'pages/NewsListPage.dart';
 import 'pages/TweetsListPage.dart';
 import 'pages/DiscoveryPage.dart';
 import 'pages/MyInfoPage.dart';
+import 'pages/NewsDetailPage.dart';
 
 void main() {
   runApp(new MyApp());
@@ -39,6 +40,10 @@ class MyOSCClientState extends State<MyApp> {
 
   // 数据初始化，包括TabIcon数据和页面内容数据
   void initData() {
+
+    _routes['newsDetail'] = (BuildContext) {
+      return new NewsDetailPage();
+    };
 
     if (tabImages == null) {
       tabImages = [
@@ -137,6 +142,12 @@ class MyOSCClientState extends State<MyApp> {
               _tabIndex = index;
             });
           },
+        ),
+        // drawer属性用于为当前页面添加一个侧滑菜单
+        drawer: new Drawer(
+          child: new Center(
+              child: new Text("this is a drawer")
+          ),
         ),
       ),
     );
