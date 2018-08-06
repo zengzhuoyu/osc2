@@ -9,7 +9,7 @@ void main() {
   runApp(new MyApp());
 }
 
-// MyApp是一个有状态的组件，因为页面标题，页面标题，页面底部Tab都会改变
+// MyApp是一个有状态的组件，因为页面标题，页面内容和页面底部Tab都会改变
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new MyOSCClientState();
@@ -27,7 +27,7 @@ class MyOSCClientState extends State<MyApp> {
   var tabImages;
   // 页面内容区域
   var _body;
-  // 页面顶部的大标题
+  // 页面顶部的大标题（也是TabItem上的文本）
   var appBarTitles = ['资讯', '动弹', '发现', '我的'];
 
   Map<String, WidgetBuilder> _routes = new Map();
@@ -88,7 +88,7 @@ class MyOSCClientState extends State<MyApp> {
     return tabImages[curIndex][0];
   }
 
-  // 根据索引值返回页面顶部标题
+  // 根据索引值返回标题
   Text getTabTitle(int curIndex) {
     return new Text(
         appBarTitles[curIndex],
@@ -132,6 +132,7 @@ class MyOSCClientState extends State<MyApp> {
           currentIndex: _tabIndex,
           onTap: (index) {
             // 底部TabItem的点击事件处理，点击时改变当前选择的Tab的索引值，则页面会自动刷新
+            //也就是点击后，先执行setState中的代码，之后页面会自动刷新，重新去执行构建方法（因为setState方法）
             setState((){
               _tabIndex = index;
             });
