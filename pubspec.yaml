@@ -43,6 +43,14 @@ flutter:
     - images/ic_nav_discover_actived.png
     - images/ic_nav_my_normal.png
     - images/ic_nav_my_pressed.png
+    - images/leftmenu/ic_xiaoheiwu.png
+    - images/leftmenu/ic_fabu.png
+    - images/leftmenu/ic_about.png
+    - images/leftmenu/ic_settings.png
+    - images/cover_img.jpg
+    - images/ic_arrow_right.png
+    - images/ic_comment.png
+    - images/ic_img_default.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
