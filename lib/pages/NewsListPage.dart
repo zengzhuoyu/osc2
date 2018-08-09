@@ -69,6 +69,7 @@ class NewsListPage extends StatelessWidget {
     i = i ~/ 2;
     // 得到列表item的数据
     var itemData = listData[i];
+
     // 代表列表item中的标题这一行
     var titleRow = new Row(
       children: <Widget>[
@@ -78,6 +79,7 @@ class NewsListPage extends StatelessWidget {
         )
       ],
     );
+
     // 时间这一行包含了作者头像、时间、评论数这几个
     var timeRow = new Row(
       children: <Widget>[
@@ -119,6 +121,7 @@ class NewsListPage extends StatelessWidget {
         )
       ],
     );
+
     var thumbImgUrl = itemData['thumb'];
     // 这是item右侧的资讯图片，先设置一个默认的图片
     var thumbImg = new Container(
@@ -155,6 +158,7 @@ class NewsListPage extends StatelessWidget {
         ),
       );
     }
+
     // 这里的row代表了一个ListItem的一行
     var row = new Row(
       children: <Widget>[
@@ -188,6 +192,7 @@ class NewsListPage extends StatelessWidget {
         )
       ],
     );
+
     // 用InkWell包裹row，让row可以点击
     return new InkWell(
       child: row,
