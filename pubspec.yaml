@@ -51,6 +51,18 @@ flutter:
     - images/ic_arrow_right.png
     - images/ic_comment.png
     - images/ic_img_default.jpg
+    - images/ic_discover_gist.png
+    - images/ic_discover_git.png
+    - images/ic_discover_nearby.png
+    - images/ic_discover_pos.png
+    - images/ic_discover_scan.png
+    - images/ic_discover_shake.png
+    - images/ic_discover_softwares.png
+    - images/ic_my_blog.png
+    - images/ic_my_message.png
+    - images/ic_my_question.png
+    - images/ic_my_recommend.png
+    - images/ic_my_team.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

@@ -99,6 +99,7 @@ class TweetsListPage extends StatelessWidget {
 
   // 渲染动弹列表的一行，普通动弹和热门动弹的一行是一样的格式，只是数据不同
   Widget getRowWidget(Map<String, dynamic> listItem) {
+
     // 列表item的第一行，显示动弹作者头像、昵称、发布时间
     var authorRow = new Row(
       children: <Widget>[
@@ -147,6 +148,7 @@ class TweetsListPage extends StatelessWidget {
         )
       ],
     );
+
     // 动弹内容，纯文本展示
     var _body = listItem['body'];
     var contentRow = new Row(
@@ -163,6 +165,7 @@ class TweetsListPage extends StatelessWidget {
         )
       ],
     );
+
     var columns = <Widget>[
       new Padding(
         padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 2.0),
@@ -173,6 +176,7 @@ class TweetsListPage extends StatelessWidget {
         child: contentRow,
       ),
     ];
+
     // 动弹中的图片数据，字符串，多张图片以英文逗号分隔
     String imgSmall = listItem['imgSmall'];
     if (imgSmall != null && imgSmall.length > 0) {
@@ -218,6 +222,7 @@ class TweetsListPage extends StatelessWidget {
         ),
       ));
     }
+
     columns.add(new Padding(
       padding: const EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 6.0),
       child: timeRow,
